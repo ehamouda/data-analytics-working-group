@@ -1,0 +1,10 @@
+name: Data-Analytics-Working-Group
+output_dir: _site
+navbar:
+   title: Data Analytics Working Group
+   type: inverse
+output:
+   html_document:
+     theme: yeti
+     highlight: tango
+     css: style.css
