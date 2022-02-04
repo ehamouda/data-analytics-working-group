@@ -20,26 +20,22 @@ This is not only fun and rewarding, it keeps the community going and, more broad
 
 Participation is open to everyone. Students, staff, and faculty are invited to join our Data Analytics Working Group sessions. Bring your computer, projects, and questions to this open working environment. 
 
+For now, due to Covid, sessions will mostly be held on zoom.
+
 ---
 #### <span style="color:maroon">**Working Hours Schedule**</spa>
 
 The following schedule contains room locations for in person hours, and Zoom links to join the virtual open working hours sessions.
 
-
 ```{r, echo = FALSE, warning = FALSE, message=FALSE}
 library(googledrive)
 library(googlesheets4)
+library(knitr)
+library(kableExtra)
+
+options(knitr.table.format = "html", knitr.kable.NA = '')
+
 drive_auth()
-```
-
-
-```{r, echo = FALSE, warning = FALSE, message=FALSE}
-library(readr)
-```
-
-
-```{r, echo = FALSE, warning = FALSE, message=FALSE}
-library(googlesheets4)
 gs4_auth()
 ```
 
@@ -50,18 +46,28 @@ ss = gs4_get("https://docs.google.com/spreadsheets/d/1tsHRTw91LC7KU7_g-s7Ukg8IUg
 #read data from google
 data = read_sheet("https://docs.google.com/spreadsheets/d/1tsHRTw91LC7KU7_g-s7Ukg8IUgfTKbO63GxM-H1XSZc/edit#gid=0")
 
-library(excelR)
-```
-
-```{r, echo = FALSE, warning = FALSE, message=FALSE}
-df = data
-excelTable(df, minDimensions = c(ncol(df),nrow(df)+0)) 
-
+#library(excelR)
 ```
 
 <br>
 
-#### <span style="color:maroon">**Zoom Working Hours Sessions**</span>
+
+```{r, echo = FALSE, warning = FALSE, message=FALSE}
+data %>%
+  kbl(caption = "**Table1: Working Hours Schedule**",table.attr = "style = \"color: black;\"") %>%
+  kable_styling(bootstrap_options = c("hover", "striped", "responsive",   "bordered")) %>%
+    column_spec(1, width="20%") %>% 
+  column_spec(2, width="15%")%>% 
+  column_spec(3, width="15%") %>% 
+  column_spec(4, width="15%")%>% 
+  column_spec(5, width="15%")%>% 
+  column_spec(6, width="15%") %>%
+  row_spec(c(0), background  = "aliceblue", bold = TRUE)
+```
+
+<br>
+
+#### <span style="color:maroon">**Zoom Links for Working Hours Sessions**</span>
 
 Click the Names to Connect to the Zoom Working Hours Sessions.
  
@@ -71,13 +77,16 @@ ss = gs4_get("https://docs.google.com/spreadsheets/d/1tUTSE5v816APeq9nhgRpsF27BK
 
 #read data from google
 data = read_sheet("https://docs.google.com/spreadsheets/d/1tUTSE5v816APeq9nhgRpsF27BKK5bkz5hxKd3bUWJwA/edit#gid=0")
-
 ```
 
-```{r, echo = FALSE, warning = FALSE, message=FALSE}
-df = data
-excelTable(df, minDimensions = c(ncol(df),nrow(df)+0)) 
 
+```{r, echo = FALSE, warning = FALSE, message=FALSE}
+data %>%
+  kbl(caption = "**Table 2: Zoom Working Hours Links**") %>%
+  kable_styling(bootstrap_options = c("hover", "striped", "responsive", "bordered")) %>% 
+  column_spec(1, width="30%") %>% 
+  column_spec(2, width="70%")%>%
+  row_spec(c(0), background  = "aliceblue")
 ```
 
 <br>
