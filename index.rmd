@@ -92,13 +92,20 @@ data %>%
 <br>
 <br>
 
+<!-- IMPORTANT Information
+Reack Joel to post the site on https://www.csusb.edu/current-students  
+https://academic.csusb.edu/dashboard/
+
+-->
+
+
 
 :::
 ::: {.column width="5%" data-latex="{0.04\textwidth}"}
 \ 
 :::
 :::::: {.column width="27%" data-latex="{0.48\textwidth}"}
-![](csusb_logo.png)
+![CSUSB](csusb_logo.png)
 
 Contact: [Dr. Essia Hamouda](ehamouda@csusb.edu)
 <br>
